@@ -1,4 +1,7 @@
-# api documentation for  [mockserver-client (v1.0.12)](https://github.com/jamesdbloom/mockserver)  [![npm package](https://img.shields.io/npm/v/npmdoc-mockserver-client.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mockserver-client) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mockserver-client.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mockserver-client)
+# npmdoc-mockserver-client
+
+#### basic api documentation for  [mockserver-client (v1.0.12)](https://github.com/jamesdbloom/mockserver)  [![npm package](https://img.shields.io/npm/v/npmdoc-mockserver-client.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mockserver-client) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mockserver-client.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mockserver-client)
+
 #### A node client for the MockServer
 
 [![NPM](https://nodei.co/npm/mockserver-client.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/mockserver-client)
@@ -71,7 +74,8 @@
     "scripts": {
         "test": "grunt"
     },
-    "version": "1.0.12"
+    "version": "1.0.12",
+    "bin": {}
 }
 ```
 
