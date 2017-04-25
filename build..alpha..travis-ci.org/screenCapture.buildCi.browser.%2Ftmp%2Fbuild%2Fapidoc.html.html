@@ -56,15 +56,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.Gruntfile">
-            function <span class="apidocSignatureSpan">mockserver-client.</span>Gruntfile
-            <span class="apidocSignatureSpan">(grunt)</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.mockServerClient">
             function <span class="apidocSignatureSpan">mockserver-client.</span>mockServerClient
             <span class="apidocSignatureSpan">(host, port)</span>
@@ -81,40 +72,29 @@
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.mockserver-client.Gruntfile">module mockserver-client.Gruntfile</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.Gruntfile.Gruntfile">
-            function <span class="apidocSignatureSpan">mockserver-client.</span>Gruntfile
-            <span class="apidocSignatureSpan">(grunt)</span>
-            </a>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mockserver-client.</span>index</span>
 
         </li>
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.mockserver-client.mockServerClient">module mockserver-client.mockServerClient</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.mockserver-client.index">module mockserver-client.index</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.mockServerClient.mockServerClient">
-            function <span class="apidocSignatureSpan">mockserver-client.</span>mockServerClient
+            <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.index.mockServerClient">
+            function <span class="apidocSignatureSpan">mockserver-client.index.</span>mockServerClient
             <span class="apidocSignatureSpan">(host, port)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.mockserver-client.proxyClient">module mockserver-client.proxyClient</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.proxyClient.proxyClient">
-            function <span class="apidocSignatureSpan">mockserver-client.</span>proxyClient
+            <a class="apidocElementLiA" href="#apidoc.element.mockserver-client.index.proxyClient">
+            function <span class="apidocSignatureSpan">mockserver-client.index.</span>proxyClient
             <span class="apidocSignatureSpan">(host, port)</span>
             </a>
 
@@ -126,74 +106,6 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.mockserver-client" id="apidoc.module.mockserver-client">module mockserver-client</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.mockserver-client.Gruntfile" id="apidoc.element.mockserver-client.Gruntfile">
-        function <span class="apidocSignatureSpan">mockserver-client.</span>Gruntfile
-        <span class="apidocSignatureSpan">(grunt)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
-
-    grunt.initConfig({
-        exec: {
-            stop_existing_mockservers: './stop_MockServer.sh'
-        },
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            user_defaults: [
-                'Gruntfile.js',
-                'js/**/*.js',
-                '!js/lib/**/*.js',
-                '&lt;%= nodeunit.no_proxy %&gt;',
-                '&lt;%= nodeunit.with_proxy %&gt;'
-            ]
-        },
-        start_mockserver: {
-            options: {
-                serverPort: 1080,
-                serverSecurePort: 1082,
-                proxyPort: 1090,
-                proxySecurePort: 1092
-            }
-        },
-        stop_mockserver: {
-            options: {
-                serverPort: 1080,
-                proxyPort: 1090
-            }
-        },
-        nodeunit: {
-            no_proxy: [
-                'test/no_proxy/*_test.js'
-            ],
-            with_proxy: [
-                'test/with_proxy/*_test.js'
-            ],
-            options: {
-                reporter: 'nested'
-            }
-        }
-    });
-
-    grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('mockserver-grunt');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
-    grunt.registerTask('test', ['start_mockserver', 'nodeunit', 'stop_mockserver']);
-
-    grunt.registerTask('wrecker', ['jshint', 'test']);
-    grunt.registerTask('default', ['exec', 'wrecker']);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
 
 
     <h2>
@@ -444,88 +356,17 @@
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.mockserver-client.Gruntfile" id="apidoc.module.mockserver-client.Gruntfile">module mockserver-client.Gruntfile</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.mockserver-client.Gruntfile.Gruntfile" id="apidoc.element.mockserver-client.Gruntfile.Gruntfile">
-        function <span class="apidocSignatureSpan">mockserver-client.</span>Gruntfile
-        <span class="apidocSignatureSpan">(grunt)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
-
-    grunt.initConfig({
-        exec: {
-            stop_existing_mockservers: './stop_MockServer.sh'
-        },
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            user_defaults: [
-                'Gruntfile.js',
-                'js/**/*.js',
-                '!js/lib/**/*.js',
-                '&lt;%= nodeunit.no_proxy %&gt;',
-                '&lt;%= nodeunit.with_proxy %&gt;'
-            ]
-        },
-        start_mockserver: {
-            options: {
-                serverPort: 1080,
-                serverSecurePort: 1082,
-                proxyPort: 1090,
-                proxySecurePort: 1092
-            }
-        },
-        stop_mockserver: {
-            options: {
-                serverPort: 1080,
-                proxyPort: 1090
-            }
-        },
-        nodeunit: {
-            no_proxy: [
-                'test/no_proxy/*_test.js'
-            ],
-            with_proxy: [
-                'test/with_proxy/*_test.js'
-            ],
-            options: {
-                reporter: 'nested'
-            }
-        }
-    });
-
-    grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('mockserver-grunt');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
-    grunt.registerTask('test', ['start_mockserver', 'nodeunit', 'stop_mockserver']);
-
-    grunt.registerTask('wrecker', ['jshint', 'test']);
-    grunt.registerTask('default', ['exec', 'wrecker']);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
 
 
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.mockserver-client.mockServerClient" id="apidoc.module.mockserver-client.mockServerClient">module mockserver-client.mockServerClient</a></h1>
+<h1><a href="#apidoc.module.mockserver-client.index" id="apidoc.module.mockserver-client.index">module mockserver-client.index</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.mockserver-client.mockServerClient.mockServerClient" id="apidoc.element.mockserver-client.mockServerClient.mockServerClient">
-        function <span class="apidocSignatureSpan">mockserver-client.</span>mockServerClient
+        <a href="#apidoc.element.mockserver-client.index.mockServerClient" id="apidoc.element.mockserver-client.index.mockServerClient">
+        function <span class="apidocSignatureSpan">mockserver-client.index.</span>mockServerClient
         <span class="apidocSignatureSpan">(host, port)</span>
         </a>
     </h2>
@@ -648,15 +489,10 @@
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.mockserver-client.proxyClient" id="apidoc.module.mockserver-client.proxyClient">module mockserver-client.proxyClient</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.mockserver-client.proxyClient.proxyClient" id="apidoc.element.mockserver-client.proxyClient.proxyClient">
-        function <span class="apidocSignatureSpan">mockserver-client.</span>proxyClient
+        <a href="#apidoc.element.mockserver-client.index.proxyClient" id="apidoc.element.mockserver-client.index.proxyClient">
+        function <span class="apidocSignatureSpan">mockserver-client.index.</span>proxyClient
         <span class="apidocSignatureSpan">(host, port)</span>
         </a>
     </h2>
